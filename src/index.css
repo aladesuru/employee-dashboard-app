@@ -1,13 +1,200 @@
-body {
+/***********************************************/
+/* Normalisation opinionated
+/************************************************/
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/***********************************************/
+/* base styling 
+/************************************************/
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 100%;
+  color: #928e8e;
+  background-color:#383737;
+}
+img {
+  width: 100%;
+}
+
+
+
+
+/* body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/***********************************************/
+/* Hero Area component
+/************************************************/
+.hero-area{
+  overflow: hidden;
+  background: url(../src/images/header-bg-image.jpg) no-repeat center;
+  background-size: cover; 
+  height: 350px;
+}
+
+/* media query
+/************************************************/
+@media all and (min-width: 769px){
+  .hero-area{
+    height: 300px;
+    width: 100%;
+  }
+}
+
+/***********************************************/
+/* Side bar component
+/************************************************/
+.side-bar{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 30%;
+  height: 100vh;
+  background-color: rgba(0,0, 0 ,.5);
+}
+
+.logo{
+  width: 200px;
+  height: auto;
+  margin: 30px auto;
+}
+
+/* media query
+/************************************************/
+@media all and (min-width: 769px){
+  
+}
+
+/***********************************************/
+/* employee details component
+/************************************************/
+.emp-details-container {
+  margin: 0 auto;
+  color: #fff;
+}
+.emp-bio{
+  background-color: #1f1e1e;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* media query
+/************************************************/
+@media all and (max-width: 768px){
+  .emp-details-container {
+    position: absolute;
+    height: 50%;
+    margin-top: -25%;
+  }
+  
+  .emp-other-details{
+    padding: 10px;
+  }
+}
+@media all and (min-width: 769px){
+  .emp-details-container {
+    /* outline : red solid 1px; */
+    width: 80%;
+    margin-top: -60px;
+    margin-left: 15%;
+  }
+  .emp-image,
+  .emp-other-details{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1%;
+    /* outline: 1px solid red; */
+  }
+  .emp-image{
+    width: 20%;
+  }
+  .emp-other-details{
+    width: 70%
+  }
+}
+
+@media all and (min-width: 1200px){
+  .emp-details-container {
+    width: 800px;
+    margin-left: 35%;
+  }
+}
+
+/***********************************************/
+/* slider component
+/************************************************/
+.slider-container{
+ margin: 30px 2%;
+}
+.slider-title,
+.slider{
+ display: inline-block;
+ vertical-align: middle;
+}
+.slider-title{
+  width: 30%;
+}
+.slider{
+  position: relative;
+  width: 60%;
+  /* outline: 1px solid red; */
+}
+.slider::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 2px rgba(0,0, 0 ,.8);
+  background-color: #fff;
+  /* outline: 1px solid green; */
+}
+.slide-line{
+height: 5px;
+background-color: #1b1a1a;
+border-radius: 5px;
+}
+
+/* media query
+/************************************************/
+@media all and (min-width: 769px){
+  
+}
+
+/***********************************************/
+/* slider component
+/************************************************/
+.profile-image{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  box-shadow: 0px 2px 100px 1px rgba(0,0, 0 ,.8);
+}
+/* media query
+/************************************************/
+@media all and (min-width: 769px){
+  .profile-image{
+    width: 150px;
+    height: 150px;
+  }
 }
