@@ -1,11 +1,11 @@
 import React from 'react';
 
-const EmployeeName = ({fontSize , name}) => {
+const EmployeeName = ({size , name , id}) => {
     return(
-        <div>
-        <p className='emp-name' style={{fontSize: fontSize}}>
-            {  name }
-        </p>
+        <div className="employee-conatainer">
+            <span className="text-shadow" style={{fontSize: size}} id={id}>
+                {  name }
+            </span>
         </div>
         
     )

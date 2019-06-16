@@ -8,18 +8,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/***********************************************/
+/* fontface
+/************************************************/
+@font-face {
+  font-family: roboto-r;
+  src: url(../src/font/roboto-regular.ttf);
+}
+@font-face {
+  font-family: roboto-b;
+  src: url(../src/font/roboto-bold.ttf);
+}
 /***********************************************/
 /* base styling 
 /************************************************/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: roboto-r ,"Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 100%;
   color: #928e8e;
   background-color:#383737;
 }
-img,svg {
+img,
+svg {
   width: 100%;
 }
 
@@ -43,12 +56,14 @@ code {
   overflow: hidden;
   background: url(../src/images/header-bg-image.jpg) no-repeat center;
   background-size: cover; 
-  background-attachment: fixed;
   height: 350px;
 }
 
 /* media query
 /************************************************/
+@media all and (max-width: 768px){
+  background-attachment: fixed;
+}
 @media all and (min-width: 769px){
   .hero-area{
     height: 300px;
@@ -63,9 +78,11 @@ code {
   position: fixed;
   top:0;
   left:0;
-  width: 30%;
   height: 100vh;
+  z-index: 100;
+  transition: width .65s;
   background-color: rgba(0,0, 0 ,.5);
+  overflow: hidden;
 }
 
 .logo{
@@ -74,15 +91,61 @@ code {
   margin: 10px auto;
   outline: 1px solid red;
 }
-.logo svg{
-  /* display: block;
-  width: 100%; */
+
+.menu{
+  padding: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top:0px;
+  left:0px;
+  background-color: rgba(0,0, 0 ,.7);
 }
+.menu:hover{
+  background-color: rgba(0,0, 0 ,.9);
+}
+#menu{
+  display: none;
+}
+#menu:checked ~ .side-bar {
+  width: 100%;
+  background-color: rgba(0,0, 0 ,.9);
+}
+
+.list-of-employee ul{
+  list-style: none;
+}
+.list-of-employee li {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: hover .69s;
+  color: #fff;
+}
+
+.list-of-employee li:hover{
+  background-color: #383737;
+  cursor: pointer;
+}
+
 
 /* media query
 /************************************************/
+@media all and (max-width: 768px){
+  .side-bar{
+    width: 0%;
+  }
+}
+
 @media all and (min-width: 769px){
-  
+  .side-bar{
+    width: 30%;
+  }
+  .menu{
+    display: none;
+  }
 }
 
 /***********************************************/
@@ -92,10 +155,19 @@ code {
   margin: 0 auto;
   color: #fff;
 }
+.emp-name{
+  font-weight: 400;
+}
+.emp-name span{
+  text-shadow: 0px 45px 40px 80px #000;
+}
 .emp-bio{
   background-color: #1f1e1e;
   border-radius: 5px;
   padding: 10px;
+}
+.emp-bio h3{
+  padding: 10px 0;
 }
 .emp-associate{
   padding: 20px 0px;
@@ -113,7 +185,9 @@ code {
     height: 50%;
     margin-top: -25%;
   }
-  
+  .emp-name{
+    text-align: center;
+  }
   .emp-other-details{
     padding: 10px;
   }
@@ -121,7 +195,7 @@ code {
 @media all and (min-width: 769px){
   .emp-details-container {
     /* outline : red solid 1px; */
-    width: 80%;
+    width: 90%;
     margin-top: -60px;
     margin-left: 15%;
   }
@@ -164,6 +238,7 @@ code {
 }
 .slider-title{
   width: 30%;
+  font-family: roboto-b
 }
 .slider{
   position: relative;
@@ -208,4 +283,21 @@ border-radius: 5px;
     width: 150px;
     height: 150px;
   }
+}
+
+/***********************************************/
+/* employee component
+/************************************************/
+.employee-conatainer span{
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+/***********************************************/
+/* helper class
+/************************************************/
+
+.text-shadow{
+  text-shadow: 0px 45px 40px 6px #000;
 }

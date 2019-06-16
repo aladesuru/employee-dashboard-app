@@ -11,25 +11,31 @@ const EmployeeDetails = ({selectedEmp}) => {
         <div className="emp-details-container"> 
             <div className="emp-details">
                 <div className="emp-image">
-                    <EmployeeProfileImage profileImage={selectedEmp.image}/>
+                    <EmployeeProfileImage profileImageId={selectedEmp.id}/>
                 </div>
                 <div className="emp-other-details">
                    <div className="emp-name"> 
-                    <EmployeeName fontSize='2em' name={selectedEmp.name} />
+                    <EmployeeName size='2em' name={selectedEmp.name} />
                    </div>
                    <div className="emp-popularity"><Slider sliderValue={selectedEmp.popularity}/></div>
                    <div className="emp-bio"> 
+                        <h3>Biography</h3>
                         <p>
                         {selectedEmp.biography}
                         </p>
                         <p className="emp-associate">
-                        <strong>
-                            Colleagues: 
-                        </strong>
                         {
+                            selectedEmp.colleagues.length > 1  ? <strong>Colleagues</strong> : ' '
+                        }
+
+                        {
+                            selectedEmp.colleagues.length > 0 
+                            ?
                             selectedEmp.colleagues.map((colleague , index) => {
-                               return <span key={index}> {colleague } , </span>
+                            return <span key={index}> &nbsp;{colleague } &nbsp;</span>
                             })
+                            : 
+                            ' '
                         }
                         </p>
                    </div>
