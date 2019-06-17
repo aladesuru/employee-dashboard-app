@@ -193,6 +193,9 @@ svg {
   .emp-other-details{
     padding: 10px;
   }
+  .emp-image{
+    margin-top: 30px;
+  }
 }
 @media all and (min-width: 769px){
   .emp-details-container {
