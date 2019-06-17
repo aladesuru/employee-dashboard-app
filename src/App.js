@@ -19,6 +19,7 @@ class App extends Component{
   id: 0
     },
  }
+ 
 handleOnClickEmp = (employee) => {
 this.state.data.filter((match , index) => {
     if(employee === match.name){
