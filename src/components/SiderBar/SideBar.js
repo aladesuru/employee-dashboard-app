@@ -6,6 +6,7 @@ import Logo from '../Logo';
 import Employee from '../EmployeeName';
 
 const SideBar = ({employee , selectEmp}) => {
+    let side = React.createRef();
     //handle click when name of an employee is click
     const handleClick = (e) => {
         if(e.target.tagName.toLowerCase() === 'span'){
@@ -17,10 +18,10 @@ const SideBar = ({employee , selectEmp}) => {
         <div className="side-bar-container">
             <input type='checkbox' id="menu" />
             <label htmlFor="menu" className="menu">Menu</label>
-            <div className='side-bar'>
+            <div className='side-bar' ref={side}>
                 <label htmlFor="menu" className="menu">Menu</label>
                 <div className='logo'>
-                <Logo />
+                    <Logo />
                 </div>
                 <div className="list-of-employee">
                     <ul onClick={handleClick}>
@@ -34,7 +35,11 @@ const SideBar = ({employee , selectEmp}) => {
                                 fontSize ='1.5em'
                             }
                             return(
-                               <li key={index}><Employee size={fontSize} name={emp.name} id={index}/></li> 
+                               <li key={index}>
+                                <label htmlFor="menu" className="emp-list">
+                                    <Employee size={fontSize} name={emp.name} id={index}/>
+                                </label>
+                               </li> 
                             )
                         })
                     }

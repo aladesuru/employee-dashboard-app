@@ -91,13 +91,14 @@ svg {
   border: none;
   cursor: pointer;
   color: #fff;
-  position: absolute;
+  position: fixed;
   top:0px;
   left:0px;
-  background-color: rgba(0,0, 0 ,.7);
+  background-color: rgba(0,0, 0 ,.9);
+
 }
 .menu:hover{
-  background-color: rgba(0,0, 0 ,.9);
+  background-color: rgba(0,0, 0 ,.8);
 }
 #menu{
   display: none;
@@ -116,6 +117,9 @@ svg {
 
 .list-of-employee li:hover{
   background-color: #383737;
+}
+.list-of-employee li label{
+  display: block;
   cursor: pointer;
 }
 
@@ -127,7 +131,7 @@ svg {
   }
   #menu:checked ~ .side-bar {
     width: 100%;
-    background-color: rgba(0,0, 0 ,.7);
+    background-color: rgba(0,0, 0 ,.9);
   }
   .logo{
     margin-top: -60px;
@@ -167,6 +171,12 @@ svg {
 .emp-associate strong{
   font-size: 1.1em;
   font-weight: 300;
+  width: 100%;
+  display: block;
+}
+.emp-associate span{
+  font-size: .89em;
+  color: #f5f5f5;
 }
 
 /* media query
