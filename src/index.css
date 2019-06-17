@@ -36,19 +36,6 @@ svg {
   width: 100%;
 }
 
-/* body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 /***********************************************/
 /* Hero Area component
 /************************************************/
@@ -62,7 +49,10 @@ code {
 /* media query
 /************************************************/
 @media all and (max-width: 768px){
-  background-attachment: fixed;
+  .hero-area{
+    background-attachment: fixed;
+  }
+  
 }
 @media all and (min-width: 769px){
   .hero-area{
@@ -110,7 +100,6 @@ code {
   display: none;
 }
 
-
 .list-of-employee ul{
   list-style: none;
 }
@@ -126,7 +115,6 @@ code {
   background-color: #383737;
   cursor: pointer;
 }
-
 
 /* media query
 /************************************************/
@@ -195,7 +183,6 @@ code {
 }
 @media all and (min-width: 769px){
   .emp-details-container {
-    /* outline : red solid 1px; */
     width: 90%;
     margin-top: -60px;
     margin-left: 15%;
@@ -205,7 +192,6 @@ code {
     display: inline-block;
     vertical-align: top;
     margin: 0 1%;
-    /* outline: 1px solid red; */
   }
   .emp-image{
     width: 20%;
@@ -244,7 +230,6 @@ code {
 .slider{
   position: relative;
   width: 60%;
-  /* outline: 1px solid red; */
 }
 .slider .slide-btn{
   position: absolute;
@@ -260,12 +245,6 @@ code {
 height: 5px;
 background-color: #1b1a1a;
 border-radius: 5px;
-}
-
-/* media query
-/************************************************/
-@media all and (min-width: 769px){
-  
 }
 
 /***********************************************/
