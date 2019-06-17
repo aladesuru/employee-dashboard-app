@@ -43,7 +43,7 @@ svg {
   overflow: hidden;
   background: url(../src/images/header-bg-image.jpg) no-repeat center;
   background-size: cover; 
-  height: 350px;
+  height: 150px;
 }
 
 /* media query
