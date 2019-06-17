@@ -25,6 +25,7 @@ const SideBar = ({employee , selectEmp}) => {
                 <div className="list-of-employee">
                     <ul onClick={handleClick} >
                     {
+                        //font size to reflect the popularity
                         employee.map((emp , index) => {
                             let fontSize = 0;
                             if(emp.popularity < 5){
