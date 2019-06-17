@@ -23,7 +23,7 @@ const SideBar = ({employee , selectEmp}) => {
                 <Logo />
                 </div>
                 <div className="list-of-employee">
-                    <ul onClick={handleClick} >
+                    <ul onClick={handleClick}>
                     {
                         //font size to reflect the popularity
                         employee.map((emp , index) => {

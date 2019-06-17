@@ -64,6 +64,9 @@ svg {
 /***********************************************/
 /* Side bar component
 /************************************************/
+.side-bar-container{
+  overflow: hidden;
+}
 .side-bar{
   position: fixed;
   top:0;
@@ -124,7 +127,7 @@ svg {
   }
   #menu:checked ~ .side-bar {
     width: 100%;
-    background-color: rgba(0,0, 0 ,.9);
+    background-color: rgba(0,0, 0 ,.7);
   }
   .logo{
     margin-top: -60px;
