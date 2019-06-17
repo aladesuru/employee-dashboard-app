@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
+//import image
 import image1 from '../../images/profile-pics/vito-corleone.jpg';
 import image2 from '../../images/profile-pics/carmelia-corleone.jpg';
 import image3 from '../../images/profile-pics/carlo-rizzi.jpg';
@@ -12,5 +15,7 @@ const ProfileImage = ({profileImageId}) => {
         </div>
     )
 }
-
+ProfileImage.propTypes = {
+    profileImageId: PropTypes.number.isRequired
+}
 export default ProfileImage;

@@ -45,6 +45,7 @@ const EmployeeDetails = ({selectedEmp}) => {
     )
 }
 EmployeeDetails.propTypes ={
-    // name: PropTypes.string.isRequired,
+    selectedEmp: PropTypes.object.isRequired,
 }
+
 export default EmployeeDetails;

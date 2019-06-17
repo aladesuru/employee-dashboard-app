@@ -1,17 +1,14 @@
-import React , {Component} from 'react';
-import logo from '../../images/logo.svg'
+import React from 'react';
+import PropTypes from "prop-types";
 
 // import components
 import Logo from '../Logo';
 import Employee from '../EmployeeName';
 
-
-
 const SideBar = ({employee , selectEmp}) => {
-    // console.log(selectEmp)
+    //handle click when name of an employee is click
     const handleClick = (e) => {
         if(e.target.tagName.toLowerCase() === 'span'){
-            console.log(e.target.textContent)
             selectEmp(e.target.textContent);
         }  
     }
@@ -22,9 +19,9 @@ const SideBar = ({employee , selectEmp}) => {
             <label htmlFor="menu" className="menu">Menu</label>
             <div className='side-bar'>
                 <label htmlFor="menu" className="menu">Menu</label>
-                {/* <div className='logo'>
+                <div className='logo'>
                 <Logo />
-                </div> */}
+                </div>
                 <div className="list-of-employee">
                     <ul onClick={handleClick} >
                     {
@@ -45,5 +42,10 @@ const SideBar = ({employee , selectEmp}) => {
             </div>
         </div>
     )
+}
+
+SideBar.propTypes = {
+    employee: PropTypes.arrayOf(PropTypes.object).isRequired,
+    selectEmp: PropTypes.func.isRequired
 }
 export default SideBar;

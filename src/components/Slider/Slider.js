@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const Slider = ({sliderValue}) => {
     return(
@@ -11,5 +12,7 @@ const Slider = ({sliderValue}) => {
         </div>
     )
 }
-
+Slider.propTypes = {
+    sliderValue: PropTypes.number.isRequired
+}
 export default Slider;
